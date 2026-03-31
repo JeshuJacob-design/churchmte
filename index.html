@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Church of Saviour</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+line-height:1.6;
+}
+
+/* NAVBAR */
+
+nav{
+background:#2c3e50;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+flex-wrap:wrap;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+}
+
+nav ul li a:hover{
+color:#f1c40f;
+}
+
+/* SEARCH */
+
+.search-box input{
+padding:6px;
+border:none;
+border-radius:5px;
+}
+
+/* HERO */
+
+.hero{
+height:70vh;
+background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+url("https://images.unsplash.com/photo-1507699622108-4be3abd695ad");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+color:white;
+text-align:center;
+}
+
+.hero h1{
+font-size:45px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+/* EVENTS */
+
+.events{
+padding:40px;
+text-align:center;
+background:#f4f4f4;
+}
+
+.events h2{
+margin-bottom:20px;
+}
+
+.event-card{
+background:white;
+padding:20px;
+margin:15px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+<!-- Songs Section -->
+<section id="songs">
+  <h2>Church Worship Songs</h2>
+
+  <div class="songs-container">
+    <div class="song-card">
+      <h3>Here I Am to Worship</h3>
+      <p>Artist: Tim Hughes</p>
+      <button onclick="playSong('song1')">Play</button>
+      <audio id="song1" src="songs/song1.mp3"></audio>
+    </div>
+
+    <div class="song-card">
+      <h3>Lord, I Lift Your Name on High</h3>
+      <p>Artist: Rick Founds</p>
+      <button onclick="playSong('song2')">Play</button>
+      <audio id="song2" src="songs/song2.mp3"></audio>
+    </div>
+
+    <div class="song-card">
+      <h3>There Is a Redeemer</h3>
+      <p>Artist: Melody Green</p>
+      <button onclick="playSong('song3')">Play</button>
+      <audio id="song3" src="songs/song3.mp3"></audio>
+    </div>
+  </div>
+</section>
+
+/* PRAYER TIMINGS */
+
+.timings{
+padding:40px;
+text-align:center;
+}
+
+table{
+margin:auto;
+border-collapse:collapse;
+width:60%;
+}
+
+table th, table td{
+border:1px solid #ccc;
+padding:10px;
+}
+
+table th{
+background:#2c3e50;
+color:white;
+}
+
+/* CONTACT */
+
+.contact{
+padding:40px;
+text-align:center;
+background:#f4f4f4;
+}
+
+/* FOOTER */
+
+footer{
+background:#2c3e50;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+align-items:flex-start;
+}
+
+nav ul{
+flex-direction:column;
+margin-top:10px;
+}
+
+nav ul li{
+margin:10px 0;
+}
+
+table{
+width:100%;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">Church of Saviour</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#events">Events</a></li>
+<li><a href="songs.html">Songs</a></li>
+<li><a href="#timings">Prayer Timings</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<div class="search-box">
+<input type="text" id="search" placeholder="Search...">
+</div>
+
+</nav>
+
+<!-- HOMEPAGE -->
+
+<section class="hero">
+<h1>Church of Saviour</h1>
+<p>A place of Faith, Hope & Love</p>
+</section>
+
+<!-- EVENTS -->
+
+<section class="events" id="events">
+
+<h2>Church Events</h2>
+
+<div class="event-card">
+<h3>Sunday Worship</h3>
+<p>Every Sunday – 9:00 AM</p>
+</div>
+
+<div class="event-card">
+<h3>Youth Fellowship</h3>
+<p>Saturday – 5:00 PM</p>
+</div>
+
+<div class="event-card">
+<h3>Bible Study</h3>
+<p>Wednesday – 7:00 PM</p>
+</div>
+
+</section>
+
+<!-- PRAYER TIMINGS -->
+
+<section class="timings" id="timings">
+
+<h2>Prayer Timings</h2>
+
+<table>
+
+<tr>
+<th>Day</th>
+<th>Prayer Time</th>
+</tr>
+
+<tr>
+<td>Monday</td>
+<td>6:00 AM</td>
+</tr>
+
+<tr>
+<td>Wednesday</td>
+<td>7:00 PM</td>
+</tr>
+
+<tr>
+<td>Friday</td>
+<td>6:30 PM</td>
+</tr>
+
+<tr>
+<td>Sunday</td>
+<td>9:00 AM</td>
+</tr>
+
+</table>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<p>📞 Phone: +91 98765 43210</p>
+<p>📍 Chennai, India</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 Church of Saviour</p>
+
+</footer>
+
+<script>
+
+document.getElementById("search").addEventListener("keyup", function(){
+
+let value=this.value.toLowerCase()
+
+if(value.includes("event")){
+alert("Scroll down to see church events")
+}
+
+if(value.includes("prayer")){
+alert("Scroll down to see prayer timings")
+}
+
+})
+
+</script>
+
+</body>
+</html>
